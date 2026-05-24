@@ -1,0 +1,16 @@
+{
+  "name": "qr-code-generator",
+  "version": "1.0.0",
+  "description": "Simple QR code generator web application",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/qr-code-generator"
+  },
+  "keywords": ["qr", "generator", "web", "url"],
+  "author": "Your Name",
+  "license": "MIT"
+}
