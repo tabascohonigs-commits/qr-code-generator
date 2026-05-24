@@ -3,11 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-    paths:
-      - '**'
-      - '!*.zip'
-      - '!upload.sh'
-      - '!.github/workflows/gh-pages.yml'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -40,7 +38,10 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './'
+          path: |
+            ./
+            !.git/
+            !.github/
           retention-days: 1
         
       - name: Deploy to GitHub Pages

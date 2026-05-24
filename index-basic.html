@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple QR Code Generator - Paste a URL and download QR codes in PNG or SVG format">
+    <title>QR Code Generator - Simple Version</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QR Code Generator - Simple Version</h1>
+            <p>Paste a URL below to generate a downloadable QR code</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="urlInput">Enter URL:</label>
+                <input 
+                    type="url" 
+                    id="urlInput" 
+                    placeholder="https://example.com" 
+                    autocomplete="off"
+                >
+                <div id="errorMessage" class="error-message"></div>
+            </section>
+
+            <section class="qr-display" id="qrDisplay" style="display: none;">
+                <h2>Your QR Code</h2>
+                <div id="qrContainer" class="qr-container"></div>
+                <div class="download-options">
+                    <button id="downloadPng" class="download-btn png">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download PNG
+                    </button>
+                    <button id="downloadSvg" class="download-btn svg">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
+                        Download SVG
+                    </button>
+                </div>
+            </section>
+
+            <section class="placeholder" id="placeholder">
+                <svg class="placeholder-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <p>Enter a URL above to generate your QR code</p>
+                <div style="margin-top: 1rem; padding: 1rem; background: #f0f9ff; border-radius: 8px;">
+                    <p style="margin-bottom: 0.5rem; font-weight: 600;">🚀 Want more features?</p>
+                    <a href="index-enhanced.html" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+                        Try the Enhanced Version →
+                    </a>
+                    <ul style="margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;">
+                        <li>✅ Custom colors and sizes</li>
+                        <li>✅ QR code scanning</li>
+                        <li>✅ History management</li>
+                        <li>✅ Social sharing</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>QR Code Generator - Simple & Fast</p>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;">
+                <a href="index-enhanced.html" style="color: #6b7280; text-decoration: none;">Enhanced Version</a> | 
+                <a href="https://github.com/tabascohonigs-commits/qr-code-generator" style="color: #6b7280; text-decoration: none;">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/qr-generator.js"></script>
+</body>
+</html>
